@@ -57,7 +57,10 @@ window.onload = init;
             orbit.damping = 0.2;
             orbit.minDistance = 10;
             orbit.maxDistance = 50;
-
+            // Limit the control function
+            orbit.enableDamping = true;
+            orbit.dampingFactor = 0.25;
+            orbit.maxPolarAngle = 0.9 * Math.PI / 2;
 
             // Loading 3D Model (.json)
             var loader = new THREE.ObjectLoader();
